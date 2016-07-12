@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/addnew_button_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_add" />
+
+        <ImageButton
+            android:id="@+id/search_button_manage"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="45dp"
+            
+            android:src="@android:drawable/ic_search_category_default" />
+
+        <EditText
+            android:id="@+id/search_edittext_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:ems="10"
+            android:hint="Search by name" />
+
+        <ImageButton
+            android:id="@+id/cancel_search_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="45dp"
+            android:src="@android:drawable/ic_delete" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <util.MyScrollView
+            android:name="@+id/scroll_wifi"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical" >
+
+            <TableLayout
+                android:id="@+id/manage_table"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0.0dip"
+                android:scrollbars="vertical"
+                android:shrinkColumns="*" />
+        </util.MyScrollView>
+    </FrameLayout>
+
+</LinearLayout>

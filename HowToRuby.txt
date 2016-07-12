@@ -1,0 +1,25 @@
+Локална база данни:
+1)Изисквания
+1.Postgre
+- Download and install : http://www.enterprisedb.com/products-services-training/pgdownload#windows
+user     : postgre
+password : password
+2.Ruby on Rails 1.9.3
+- Download and install : http://railsinstaller.org/en
+
+2) Setup
+Отваряш конзолата и :
+1.cd ... (до папката на rails проекта)
+?:/.../Bitbucket/wifi/Code/RubyServer/wi-fi_server/
+2. bundle install
+3. rake db:create 
+4. rake db:migrate
+5. rake db:seed
+
+3) Server
+1. rails server или rails s
+2. отваряш в internet browser : localhost:3000/admin
+-> admin panel login : 
+admin@example.com
+password
+Сървъра работи докато конзолата работи.

@@ -1,0 +1,51 @@
+a = WifiTask.new
+a.keyword = "googles"
+a.website = "website.com"
+a.save
+a = WifiTask.new
+a.keyword = "google"
+a.website = "google.com"
+a.save
+a = WifiTask.new
+a.keyword = "fast"
+a.website = "runfast.com"
+a.save
+a = WifiTask.new
+a.keyword = "mc"
+a.website = "mcdonalds.com"
+a.save
+a = WifiTask.new
+a.keyword = "bike"
+a.website = "bikes.com"
+a.save
+a = WifiTask.new
+a.keyword = "website"
+a.website = "website.com"
+a.save
+a = WifiTask.new
+a.keyword = "train"
+a.website = "trainsale.com"
+a.save
+a = WifiTask.new
+a.address = "Address8"
+a.keyword = "checkers"
+a.website = "checkers.com"
+a.save
+a = WifiTask.new
+a.address = "Address9"
+a.keyword = "chess"
+a.website = "chesschallange.com"
+a.save
+a = WifiTask.new
+a.keyword = "funfacts"
+a.website = "funfacts.com"
+a.save
+a = WifiTask.new
+a.keyword = "fun"
+a.website = "9gag.com"
+a.save
+a = WifiTask.new
+a.keyword = "fun"
+a.website = "4chan.com"
+a.save
+

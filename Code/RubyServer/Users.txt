@@ -1,0 +1,9 @@
+a = User.new
+a.name = "Nikolam"
+a.email = "nikolam@mail.bg"
+a.password = "password"
+a.skip_confirmation!
+a.gmaps = true
+a.latitude = 3
+a.longitude = 3
+a.save

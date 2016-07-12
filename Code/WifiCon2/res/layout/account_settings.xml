@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <EditText
+        android:id="@+id/new_password_editinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/old_password_editinfo"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="@string/en_new_password"
+        android:inputType="textPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/confirm_change_editinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/confirm_new_password_editinfo"
+        android:layout_marginTop="22dp"
+        android:text="@string/en_confirm_change" />
+
+    <EditText
+        android:id="@+id/old_password_editinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/new_password_editinfo"
+        android:layout_alignLeft="@+id/email_editinfo"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="@string/en_old_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/email_editinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/username_editinfo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="34dp"
+        android:ems="10"
+        android:hint="@string/en_email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/confirm_new_password_editinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/new_password_editinfo"
+        android:layout_below="@+id/new_password_editinfo"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="@string/en_repeat_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/username_editinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/old_password_editinfo"
+        android:layout_alignLeft="@+id/old_password_editinfo"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="@string/en_username"
+        android:inputType="text" />
+
+</RelativeLayout>

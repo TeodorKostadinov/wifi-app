@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'gmaps4rails' %>
+
+ <%= stylesheet_link_tag "application", :media => "all" %>
+ <%= javascript_include_tag "application"%>
+
+<%= javascript_include_tag "/gmaps4rails.base"%>
+<%= javascript_include_tag "/gmaps4rails.googlemaps"%>
+<%= javascript_include_tag "/gmaps4rails.mapquest"%>
+<%= javascript_include_tag "/gmaps4rails.openlayers"%>
+<%= gmaps({
+        "map_options" => { "zoom" => 2, "auto_adjust" => false},
+        "markers"     => { "data" => markers }
+        })
+%>
+<%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.5/src/markerclusterer_packed.js"%>
+<%= yield :scripts %>

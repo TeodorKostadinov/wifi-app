@@ -1,0 +1,8 @@
+rake db:reset
+rake db:migrate:redo VERSION=20130820073656
+rake db:migrate:redo VERSION=20130830084452
+rake db:migrate:redo VERSION=20130830084501
+rake db:migrate:redo VERSION=20130830090208
+rake db:migrate:redo VERSION=20130904100648
+rake db:migrate:redo VERSION=20130904160616
+rake db:migrate:redo VERSION=20130904164424

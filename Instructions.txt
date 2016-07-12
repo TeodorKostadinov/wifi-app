@@ -1,0 +1,40 @@
+HOW TO INITIALIZE ECLIPSE
+1)
+http://developer.android.com/sdk/index.html
+Unrar
+2)
+run eclipse.exe
+3)
+Import WifiCon2
+4) -> Run once, even if soem of them are not installed
+Window > Android SDK Manager:
+Tools
+->Android SDK Build-tools Rev. 17
+Android 4.3 API 18
+->(ALL)
+Extras
+->Google play service
+->Google USB drive
+-- Restart eclipse when done
+5)
+Import googlePlay service @ <bitbucket>\Downloads\google-play-services_lib
+6)
+RightClick WifiCon2 -> Properties on WifiCon2(project)
+Android -> Libraries::Add google-play-services_lib
+Android -> Project Build Target:: Google APIs <..> where Api Level == 18
+7)
+Window -> Andround Virtual Device Manager::New
+->Name:<name>
+->Device:Nexus 4
+->Target:google Api(18)
+->RAM = 512
+->Use host GPU = true
+8)
+RightClick WifiCon2 -> Run As::Android Application
+PATIENCE :)
+9)
+Run Server if Local, else use application
+10) FOR NEW EMULATOR
+Signup http://www.genymotion.com/ and download 
+Install
+Login from application and add type of android emulator version that you wish to use

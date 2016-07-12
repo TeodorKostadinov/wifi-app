@@ -1,0 +1,101 @@
+a = WifiSpot.new
+a.name = "WifiSpot6"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot8"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot9"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot10"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot11"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot12"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot13"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot14"
+a.address="Address"
+a.password = "pp22AACA"
+a.ip = "192.168.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot2"
+a.address="Address"
+a.password = "pp22aa22"
+a.ip = "33.44.1.1"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot3"
+a.address="Address"
+a.password = "CATOSTRAFI"
+a.ip = "51.52.53.54"
+a.latitude = 10
+a.longitude = 10
+a.gmaps = true
+a.save
+a = WifiSpot.new
+a.name = "WifiSpot4"
+a.address="Address"
+a.password = "CATOSTRAFI"
+a.ip = "51.52.53.54"
+a.latitude = 98
+a.longitude = 56
+a.gmaps = true
+a.save
+192.168.1.1
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/logged_in"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="@string/bg_logged_in_as"/>
+    <item
+        android:id="@+id/acc_sett"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="@string/bg_settings"/>
+    <item
+        android:id="@+id/take_tsk"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="@string/bg_get_new_tasks"/>
+    <item
+        android:id="@+id/targ_list"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="@string/bg_task_list"/>
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="@string/bg_logout"/>
+
+</menu>

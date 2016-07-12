@@ -1,0 +1,120 @@
+<%= stylesheet_link_tag 'gmaps4rails' %>
+
+<style type="text/css">
+  form ol{
+    list-style: none
+  }
+  form li {
+    width: 400px;
+  }
+  .inline-errors{
+    display: none
+  }
+</style>
+
+
+<%= semantic_form_for [:admin, @wifi_spot] do |f| %>
+  <ol>
+     <%= f.input :name%>
+     <%= f.input :address%>
+     <button id = "GetByAddressBtn"> VIA ADDRES </button>
+     <%=f.input :password%>
+     <%=f.input :ip%>
+     <%=f.input :latitude%>
+     <%=f.input :longitude%>
+     <%=f.input :gmaps%>
+     </ol>
+     <% if @wifi_spot.errors.count > 0 %>
+       <p><b>FIELDS INFO</b></p>
+       <% for key in @wifi_spot.errors.keys do %>
+        <% if @wifi_spot.errors[key].length>0%>
+          <%
+          str = ""
+           for s in @wifi_spot.errors[key] do
+            str += "<br>#{"&nbsp" * 10}#{s}"
+          end%>
+         <%= "<p>#{key.to_s}: #{str.to_s}</p>".html_safe%>
+         <% end %>
+       <% end %>
+     <% end %>
+    <%= f.actions %>
+     <div>
+      <p>Click on the map to  pick a new destination.</p>
+      <%= gmaps4rails(@wifi_spot.to_gmaps4rails) %>
+    </div>
+
+   
+
+
+    <%= content_for :scripts do %>
+    <script type="text/javascript" charset="utf-8">
+      var markersArray = [];
+      Gmaps.map.callback = function() {
+        var marker = Gmaps.map.markers[0];
+        if (marker) {
+          // Move existing marker when editing a previously stored location
+          google.maps.event.addListener(marker.serviceObject, 'dragend', function() {
+            updateFormLocation(this.getPosition());
+          });
+        }
+
+        // On click, clear markers, place a new one, update coordinates in the form
+        google.maps.event.addListener(Gmaps.map.serviceObject, 'click', function(event) {
+          clearOverlays();
+          placeMarker(event.latLng);
+          updateFormLocation(event.latLng);
+        });
+      };
+      // Update form attributes with given coordinates
+      function updateFormLocation(latLng) {
+        $('#wifi_spot_latitude').val(latLng.lat());
+        $('#wifi_spot_longitude').val(latLng.lng());
+        $('#wifi_spot_gmaps_zoom').val(Gmaps.map.serviceObject.getZoom());
+      }
+      // Add a marker with an open infowindow
+      function placeMarker(latLng) {
+        var marker = new google.maps.Marker({
+          position: latLng, 
+          map: Gmaps.map.serviceObject,
+          draggable: true
+        });
+        markersArray.push(marker);
+        // Set and open infowindow
+        var infowindow = new google.maps.InfoWindow({
+          content: '<div class="popup"><h2>Awesome!</h2><p>Drag me and adjust the zoom level.</p>'
+        });
+        infowindow.open(Gmaps.map.serviceObject, marker);
+        // Listen to drag & drop
+        google.maps.event.addListener(marker, 'dragend', function() {
+          updateFormLocation(this.getPosition());
+        });
+      }
+      // Removes the overlays from the map, including the ones loaded with the map itself
+      function clearOverlays() {
+        for (var i = 0; i < markersArray.length; i++ ) {
+          markersArray[i].setMap(null);
+        }
+        markersArray.length = 0;
+
+        for (var i = 0; i < Gmaps.map.markers.length; i++ ) {
+          Gmaps.map.clearMarker(Gmaps.map.markers[i]);
+        }
+      }
+    </script>
+  <% end %>
+  <%= yield :scripts %>
+
+  <% end %>
+
+ <%= stylesheet_link_tag "application", :media => "all" %>
+ <%= javascript_include_tag "application"%>
+
+ <%= stylesheet_link_tag "active_admin", :media => "all" %>
+
+<%= javascript_include_tag "/gmaps4rails.base"%>
+<%= javascript_include_tag "/gmaps4rails.googlemaps"%>
+<%= javascript_include_tag "/gmaps4rails.mapquest"%>
+<%= javascript_include_tag "/gmaps4rails.openlayers"%>
+  <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.5/src/markerclusterer_packed.js"%>
+   <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.5/src/markerclusterer_packed.js"%>
+     <%= javascript_include_tag "addressToCoordinates"%>

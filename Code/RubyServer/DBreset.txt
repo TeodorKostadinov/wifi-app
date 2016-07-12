@@ -1,0 +1,10 @@
+heroku run rake db:reset
+heroku run rake db:migrate:redo VERSION=20130820073656
+heroku run rake db:migrate:redo VERSION=20130830084452
+heroku run rake db:migrate:redo VERSION=20130830084501
+heroku run rake db:migrate:redo VERSION=20130830090208
+heroku run rake db:migrate:redo VERSION=20130904100648
+heroku run rake db:migrate:redo VERSION=20130904160616
+heroku run rake db:migrate:redo VERSION=20130910092141
+heroku run rake db:migrate:redo VERSION=20130910093829
+

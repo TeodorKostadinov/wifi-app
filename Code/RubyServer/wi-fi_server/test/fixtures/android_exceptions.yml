@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ip: MyString
+  user: 
+  time: 2014-07-03 16:01:32
+  stacktrace: MyText
+  class_invoker: MyString
+  android_exception_type: 
+
+two:
+  ip: MyString
+  user: 
+  time: 2014-07-03 16:01:32
+  stacktrace: MyText
+  class_invoker: MyString
+  android_exception_type: 

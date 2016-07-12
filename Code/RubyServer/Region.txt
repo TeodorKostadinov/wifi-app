@@ -1,0 +1,54 @@
+a = Region.new
+a.name = "RegionA"
+a.latitudeMax = 15
+a.latitudeMin = 5
+a.longitudeMax = 15
+a.longitudeMin = 5
+a.save
+a = Region.new
+a.name = "RegionB"
+a.latitudeMax = 13
+a.latitudeMin = 3
+a.longitudeMax = 13
+a.longitudeMin = 2
+a.save
+a = Region.new
+a.name = "RegionC"
+a.latitudeMax = 6
+a.latitudeMin = -20
+a.longitudeMax = 30
+a.longitudeMin = -30
+a.save
+a = Region.new
+a.name = "RegionD"
+a.latitudeMax = 25
+a.latitudeMin = 22
+a.longitudeMax = 25
+a.longitudeMin = 22
+a.save
+a = Region.new
+a.name = "RegionE"
+a.latitudeMax = 66
+a.latitudeMin = 43
+a.longitudeMax = 66
+a.longitudeMin = 43
+a.save
+a = Region.new
+a.name = "RegionF"
+a.latitudeMax = 99
+a.latitudeMin = 55
+a.longitudeMax = 99
+a.longitudeMin = 55
+a.save
+a = Region.new
+a.name = "RegionG"
+a.latitudeMax = 39
+a.latitudeMin = 5
+a.longitudeMax = 15
+a.longitudeMin = 5
+a.save
+
+
+
+
+
